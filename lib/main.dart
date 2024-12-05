@@ -83,7 +83,7 @@ Then after, following the Flutter Front-end syntax, I have added this paragraph 
 
 To actually deploy this, I knew that GitHub offers service where I can deploy this Flutter application. To do so, I first created the web build by running `flutter build web` on terminal. Which creates a web version that I can deploy.
 
-Then I made a git repo for this project.
+Then I made a git repo for this project. Installed gh-pages using the command `npm install -g gh-pages` which after I deployed the web application using `gh-pages -d build/web`.
 ''',
               ),
             ],
