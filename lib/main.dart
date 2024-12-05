@@ -50,13 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Center(
-          child: Column(
-            children: [
-              const Text(
-                '''
+      body: Column(
+        children: [
+          const SizedBox(height: 50),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              '''
 Flutter is an open-source UI toolkit by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. My previous work used this framework and therefore I have chose this framework to do my final question in lab 10.
 
 In order to use this framework, I must first install flutter on my machine. There are multiple ways to intall Flutter, the latest recommend way is to install using VS Code.
@@ -66,17 +66,20 @@ First Install Visual Studio Code and get the "Flutter extension for VS Code". In
 After following the guided installation, we can make sure that we have everything by running `flutter doctor -v`.
 
 More detailed guide on how to install flutter can be found here.
-''',
-              ),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () => openLink(),
-                  child: const Text('Open Flutter Website (MacOS)'),
-                ),
-              ),
-              const SizedBox(height: 50),
-              const Text(
-                '''
+          ''',
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () => openLink(),
+              child: const Text('Open Flutter Website (MacOS)'),
+            ),
+          ),
+          const SizedBox(height: 50),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              '''
 For the website you are looking, I had to install flutter's library for opening links in a new tab. Which can be installed by running `flutter pub add url_launcher` in the terminal from project directory.
 
 Then after, following the Flutter Front-end syntax, I have added this paragraph and the button that directs to the Flutter install page.
@@ -84,11 +87,10 @@ Then after, following the Flutter Front-end syntax, I have added this paragraph 
 To actually deploy this, I knew that GitHub offers service where I can deploy this Flutter application. To do so, I first created the web build by running `flutter build web` on terminal. Which creates a web version that I can deploy.
 
 Then I made a git repo for this project. Installed gh-pages using the command `npm install -g gh-pages` which after I deployed the web application using `gh-pages -d build/web`.
-''',
-              ),
-            ],
+                ''',
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
